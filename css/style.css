@@ -9,6 +9,12 @@ html, body {
     height: 100%;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 0;
+}
+
 .clear {
     clear: both;
 }
@@ -99,6 +105,7 @@ header .menu-mobile ul li a {
 .menu-desktop li a {
     color: white;
     text-decoration: none;
+    transition: 250ms ease-in;
 }
 
 .menu-desktop li a.li-call {
@@ -106,6 +113,17 @@ header .menu-mobile ul li a {
     padding: 10px 25px;
     border-radius: 20px;
     text-transform: uppercase;
+    transition: 250ms ease-in;
+}
+
+.menu-desktop li a.li-call:hover {
+    background-color: #e41d0f;
+    border: 1px solid #e41d0f;
+}
+
+.menu-desktop li a:hover:not(.li-call) {
+    color: #e41d0f;
+    border-bottom: 1px solid #e41d0f;
 }
 
 section .main-call {
@@ -144,6 +162,13 @@ section.main-banner input[type=submit] {
     color: white;
     font-weight: 400;
     cursor: pointer;
+    transition: 250ms ease-in;
+}
+
+section.main-banner input[type=submit]:hover {
+    background-color: white;
+    color: #e41d0f;
+    border: 1px solid #e41d0f;
 }
 
 section.call-main {
@@ -245,10 +270,18 @@ section.call-middle i {
     border-radius: 20px;
     border: 1px solid #e41d0f;
     text-transform: uppercase;
+    color: #e41d0f;
     font-weight: 400;
     position: relative;
     left: 15px;
     cursor: pointer;
+    transition: 250ms;
+}
+
+.box-single .btn-orc:hover {
+    border: 1px solid #e41d0f;
+    background-color: #e41d0f;
+    color: white;
 }
 
 .box-single .box-logo {
@@ -371,6 +404,13 @@ section.contact .input-form input[type=submit] {
     border-radius: 20px;
     border: 1px solid #e41d0f;
     cursor: pointer;
+    transition: 250ms ease-in;
+}
+
+section.contact .input-form input[type=submit]:hover {
+    color: #e41d0f;
+    background-color: white;
+    border: 1px solid #e41d0f;
 }
 
 section.contact .input-form textarea {
@@ -422,6 +462,11 @@ section.bottom .face-logo p {
     color: #4d4d4d;
 }
 
+section.bottom .face-logo p i:hover {
+    transition: 250ms ease-in;
+    color: #4267B2;
+}
+
 footer {
     display: flex;
     width: 100%;
@@ -465,6 +510,12 @@ footer p > i {
     padding: 10px 20px;
     border: 1px solid #ccc;
     border-radius: 20px;
+    transition: 250ms ease-in;
+}
+
+footer p > i:hover {
+    color: white;
+    background-color: #e41d0f;
 }
 
 @media screen and (max-width: 860px) {
